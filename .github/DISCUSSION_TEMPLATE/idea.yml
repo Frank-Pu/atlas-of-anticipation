@@ -1,0 +1,31 @@
+title: "💡 Idea — propose a new direction"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for the atlas? A new content category (food, poetry, architecture)?
+        A new visualization mode? A novel interaction? Drop it here before opening a PR.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What is it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it belong on this atlas?
+      description: What does it let people see / feel that the current version can't?
+    validations:
+      required: true
+
+  - type: textarea
+    id: sketch
+    attributes:
+      label: Sketch / reference (optional)
+      description: Drag in a screenshot, a link to a project that does this well, or a rough description.
+
+labels: ["idea"]

@@ -1,0 +1,43 @@
+name: 🌐 Translation contribution
+description: Add or improve a translation (zh-Hans / zh-Hant / new language).
+title: "Translation: <city or area>"
+labels: ["i18n", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Partial translations are welcome — you don't have to translate every field.
+        Per-city strings live in `cities-i18n.js`; UI strings in `i18n.js`.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Target language
+      options:
+        - 简体中文 (zh-Hans)
+        - 繁體中文 (zh-Hant)
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: scope
+    attributes:
+      label: What are you translating?
+      placeholder: "City: Lisbon  /  UI strings  /  Marrakech taglines only"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Translation content
+      description: Paste your translations here, or link to a draft.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes for reviewers (optional)
+      placeholder: Word choices, dialect preferences, anything tricky.

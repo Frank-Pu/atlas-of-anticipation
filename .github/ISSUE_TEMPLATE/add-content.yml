@@ -1,0 +1,60 @@
+name: 📖 Add content to an existing city
+description: Propose a novel, film, song, or history entry for a city already on the atlas.
+title: "Add to <city>: <title>"
+labels: ["city: addition", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a book / film / song / piece of history that belongs to a city already on the atlas?
+        Drop it here.
+
+  - type: input
+    id: city_id
+    attributes:
+      label: City (use the `id` from cities.js — e.g. `kyoto`, `paris`, `mexicocity`)
+      placeholder: kyoto
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Novel / book
+        - Film
+        - Music
+        - History event
+        - Other (propose new category)
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title / event name
+      placeholder: Spirited Away
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author / Director / Artist
+      placeholder: Hayao Miyazaki
+
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      placeholder: "2001"
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Note — one sentence on why this belongs to this city
+      description: Specific over generic. See CONTRIBUTING.md for examples.
+      placeholder: The bathhouse is everywhere a Japanese onsen has ever been.
+    validations:
+      required: true

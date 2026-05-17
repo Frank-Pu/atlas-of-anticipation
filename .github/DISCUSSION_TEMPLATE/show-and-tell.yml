@@ -1,0 +1,31 @@
+title: "📍 Show & Tell — a city memory"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not a bug, not a contribution — just a memory of a place.
+        Share what a city means to you. Others might use it as a seed for a contribution.
+
+  - type: input
+    id: city
+    attributes:
+      label: Which city?
+      placeholder: Lisbon / 京都 / a place not yet on the atlas
+    validations:
+      required: true
+
+  - type: textarea
+    id: memory
+    attributes:
+      label: Your memory / association
+      description: A scene, a smell, a song, a feeling. As long or short as you like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Anything to share alongside? (optional)
+      description: A photo, a song link, a paragraph from a book that captures it.
+
+labels: ["show-and-tell"]

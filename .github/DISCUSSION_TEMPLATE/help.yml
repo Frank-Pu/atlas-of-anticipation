@@ -1,0 +1,26 @@
+title: "🙋 Help & questions"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got stuck running locally? Confused about the data shape? Ask here.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: Browser / OS (if relevant)
+      placeholder: Chrome 124 on macOS
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried?
+
+labels: ["help"]

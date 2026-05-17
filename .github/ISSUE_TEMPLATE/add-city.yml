@@ -1,0 +1,102 @@
+name: 🌍 Add a new city
+description: Propose a city that should be added to the atlas.
+title: "Add city: <name>"
+labels: ["city: new", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for adding a corner of the world.
+        Fill in what you can — partial proposals are welcome.
+        See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) for the full data shape and style guide.
+
+  - type: input
+    id: name
+    attributes:
+      label: City name (English / Latin script)
+      placeholder: Lisbon
+    validations:
+      required: true
+
+  - type: input
+    id: name_local
+    attributes:
+      label: Local-script name
+      placeholder: Lisboa / 京都 / مراكش
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      placeholder: Portugal
+    validations:
+      required: true
+
+  - type: input
+    id: coords
+    attributes:
+      label: Latitude, Longitude (decimal degrees)
+      placeholder: "38.7223, -9.1393"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tagline
+    attributes:
+      label: Tagline (one evocative line, 7–12 words)
+      placeholder: Seven hills and the slow ache of saudade.
+    validations:
+      required: true
+
+  - type: textarea
+    id: novels
+    attributes:
+      label: Novels (at least 2)
+      description: "Format: `Title — Author (year): one-sentence note`"
+      placeholder: |
+        The Book of Disquiet — Fernando Pessoa (1982 posth.): A city of clerks, balconies, and the unrest of being.
+    validations:
+      required: true
+
+  - type: textarea
+    id: film
+    attributes:
+      label: Film (at least 2)
+      description: "Format: `Title — Director (year): note`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: music
+    attributes:
+      label: Music (at least 2)
+      description: "Format: `Title — Artist (year): note`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: history
+    attributes:
+      label: History (up to 5 turning points that shape how the city feels today)
+      description: "Format: `year — event`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: palette
+    attributes:
+      label: Palette ideas (optional)
+      description: Where do the city's colors come from? (ceramics, walls, light, food)
+      placeholder: Terracotta from the medina walls; cobalt from the azulejos.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Self-check
+      options:
+        - label: I read CONTRIBUTING.md and tried to avoid marketing voice
+          required: true
+        - label: I'm happy to open a PR myself, or for someone else to pick this up
+          required: true
