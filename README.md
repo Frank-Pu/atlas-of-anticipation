@@ -18,7 +18,7 @@
 
 ---
 
-![preview](screenshots/globe-wide.jpg)
+![preview](screenshots/globe-wide.png)
 
 ---
 
